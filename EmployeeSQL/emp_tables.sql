@@ -5,7 +5,7 @@ Create Table dept_emp (
 );
 Create Table dept_manager (
 	dept_no VARCHAR NOT NULL,
-	emp_no VARCHAR,
+	emp_no VARCHAR NOT NULL,
 	PRIMARY KEY (dept_no, emp_no)
 );
 Create Table employees (
