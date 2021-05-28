@@ -17,7 +17,7 @@ Create Table employees (
 	first_name VARCHAR NOT NULL,
 	last_name VARCHAR NOT NULL,
 	sex VARCHAR NOT NULL,
-	hire_date VARCHAR,
+	hire_date VARCHAR NOT NULL,
 	PRIMARY KEY(emp_no)
 );
 
