@@ -4,7 +4,7 @@ Create Table dept_emp (
 	PRIMARY KEY (emp_no, dept_no)
 );
 Create Table dept_manager (
-	dept_no VARCHAR,
+	dept_no VARCHAR NOT NULL,
 	emp_no VARCHAR,
 	PRIMARY KEY (dept_no, emp_no)
 );
