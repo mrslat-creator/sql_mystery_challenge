@@ -32,8 +32,10 @@ SElECT e.emp_no,
 	   e.first_name,
 	   d.dept_name
 FROM employees AS e
-	Inner JOIN departments AS d
-	On (de.dept_no = d.dept_no)
+	Inner JOIN dept_emp AS de
+	   On (e.emp_no = de.dept_no)
+	INNER JOIN departments AS d
+	   On (de.dept_no = d.dept_no)
 ORDER BY e.emp_no;
 
 -- Employees whose first name is "Hercules" and last name begins with "B"
@@ -65,11 +67,11 @@ FROM employees AS e
 	     ON (e.emp_no = de.emp_no)
 	INNER JOIN departments AS d
 	     ON (de.dept_no = d.dept_no)
-WHERE d.dept_name IN = ('Sales', 'Development')
+WHERE d.dept_name IN ('Sales', 'Development')
 Order BY e.emp_no;
 
 --The Frequency of Employee Last Names
 Select last_name, COUNT(last_name)
-FROM empoyees
+FROM employees
 GROUP BY last_name
 Order by COUNT(last_name) DESC;

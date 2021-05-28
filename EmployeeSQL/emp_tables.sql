@@ -1,6 +1,6 @@
 Create Table dept_emp (
-	emp_no VARCHAR,
-	dept_no VARCHAR,
+	emp_no VARCHAR NOT NULL,
+	dept_no VARCHAR NOT NULL,
 	PRIMARY KEY (emp_no, dept_no)
 );
 Create Table dept_manager (
@@ -29,3 +29,18 @@ Create Table titles (
 	title VARCHAR,
 	PRIMARY KEY (title_id)
 );
+
+SELECT *
+FROM dept_no;
+
+SELECT *
+FROM dept_manager;
+
+SELECT *
+FROM employees
+
+SELECT *
+FROM salaries
+
+SELECT*
+FROM Titles
