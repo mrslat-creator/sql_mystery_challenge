@@ -22,14 +22,14 @@ Create Table employees (
 );
 
 Create Table salaries (
-	emp_no VARCHAR,
-	salary VARCHAR,
+	emp_no VARCHAR NOT NULL,
+	salary VARCHAR NOT NULL,
 	PRIMARY KEY(emp_no)
 );
 
 Create Table titles (
-	title_id Varchar,
-	title VARCHAR,
+	title_id Varchar NOT NULL,
+	title VARCHAR NOT NULL,
 	PRIMARY KEY (title_id)
 );
 
@@ -40,10 +40,10 @@ SELECT *
 FROM dept_manager;
 
 SELECT *
-FROM employees
+FROM employees;
 
 SELECT *
-FROM salaries
+FROM salaries;
 
-SELECT*
-FROM Titles
+SELECT *
+FROM Titles;
