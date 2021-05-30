@@ -1,1 +1,1 @@
-# sql_mystery_challenge
+# Sql_mystery_challenge
