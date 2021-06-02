@@ -13,7 +13,7 @@ Create Table departments (
 -- Create table employees
   
 Create Table employees (
-     empl_no INT NOT NULl,
+     empl_no INT NOT NUll,
   	 birth_date DATE NOT Null,
      first_name VARCHAR(20) NOT Null,
   	 last_name Varchar(20) NOT Null,
@@ -29,8 +29,6 @@ Create Table employees (
 Create Table dept_emp (
    emp_no INT NOT Null
 	 dept_no VARCHAR(10)NOT Null,
-	 from_date DATE NOT Null, 
-	 to_date DATE NOT Null, 
 	);
 
 select * from dept_emp
@@ -40,8 +38,6 @@ select * from dept_emp
 Create Table dept_managers (
   dept_no Varchar(10),
 	emp_no Int, 
-	from_date Date NOT Null,
-	to_date Date NOT Null,
 );
 
 select * from dept_managers
@@ -51,8 +47,6 @@ select * from dept_managers
 Create Table salaries (
    emp_no BigInt NOT Null,
    salary BigInt NOT Null,
-   from_date Date NOT Null,
-   to_date Date NOT Null
 );
 
 select * from salaries
@@ -62,6 +56,4 @@ select * from salaries
 Create Table titles (
    emp_no Int NOT Null,
 	 title VARCHAR(20), NOT Null,
-	 from_date Date NOT Null,
-	 to_date Date NOT Null
-);
+	);
