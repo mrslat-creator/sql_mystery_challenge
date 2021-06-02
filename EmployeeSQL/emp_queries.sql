@@ -30,4 +30,26 @@ LEFT JOIN employees
 ON  Dept_manager.emp_no = employees.emp_no
 ORDER BY emp_no
 
---Name of each employee:
+--Name of each employee the departments that they are in:
+SELECT employees.emp_no, 
+       employees.last_name,
+       employees.first_name, 
+       dept_emp.dept_no,
+       departments.dept_name
+FROM employees
+LEFT Join dept_emp On employees.emp_no=dept_emp.emp.no
+LEFT Join departments On departments.dept_no=dept_emp.dept_no
+ORDER BY emp_no;
+
+--Employees with the first name "Hercules" and last name that starts with "B"
+
+SELECT * FROM employees
+WHERE first_name = "Hercules" AND last_name "B%";
+
+--Sales Department
+SELECT employees.emp_no, 
+       employees.last_name,
+       employees.first_name, 
+       dept_emp.dept_no,
+FROM employees
+LEFT JOIN
