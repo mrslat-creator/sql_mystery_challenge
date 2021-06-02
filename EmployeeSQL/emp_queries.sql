@@ -1,4 +1,4 @@
---7 Queries
+--8 Queries
 
 --The following is are details of each employee: Employee Number, Last & First Name, sex, and salary
 
@@ -52,4 +52,5 @@ SELECT employees.emp_no,
        employees.first_name, 
        dept_emp.dept_no,
 FROM employees
-LEFT JOIN
+LEFT JOIN dept_emp
+WHERE departments.dept_name="Sales"; 
