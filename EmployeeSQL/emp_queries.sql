@@ -54,3 +54,19 @@ SELECT employees.emp_no,
 FROM employees
 LEFT JOIN dept_emp
 WHERE departments.dept_name="Sales"; 
+
+--Sales and Development Departments
+SELECT employees.emp_no, 
+       employees.last_name,
+       employees.first_name, 
+       dept_emp.dept_no,
+FROM employees
+LEFT JOIN dept_emp
+WHERE departments.dept_name in ("Sales", "Development") 
+
+--Employees that share a common name:
+SELECT last_name, COUNT(*) AS freq_count
+FROM employees
+GROUP BY last_name
+ORDER By freq_count DESC;
+
